@@ -15,7 +15,7 @@ function PopupWithForm({name, isOpen, onClose, title, onSubmit, children, button
                     disabled=""
                     onClick={onSubmit}
                 >
-    {buttonText}
+    {buttonText || 'Сохранить'}
                 </button>
             </form>
 

@@ -1,4 +1,4 @@
-import React from "react";
+import {useEffect, useState} from "react";
 import {apiData} from "../utils/Api.js";
 import Card from "./Card.js";
 import profileAvatar from '../images/profile_image.jpg'
@@ -9,12 +9,12 @@ function Main({
         onEditProfile,
         onAddPlace,
         onCardClick}) {
-    const [userName, setUserName] = React.useState("");
-    const [userDescription, setUserJob] = React.useState("");
-    const [userAvatar, setUserAvatar] = React.useState("");
-    const [cards, setCards] = React.useState([]);
+    const [userName, setUserName] = useState("");
+    const [userDescription, setUserJob] = useState("");
+    const [userAvatar, setUserAvatar] = useState("");
+    const [cards, setCards] = useState([]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         apiData
             .getUserProfile()
             .then((userData) => {

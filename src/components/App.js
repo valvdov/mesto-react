@@ -51,7 +51,6 @@ function App() {
           title="Редактировать профиль"
           isOpen={isEditProfilePopupOpen ? "popup_opened" : ""}
           onClose={closeAllPopups}
-          buttonText="Сохранить"
           >
           <input
               className="popup__text"
@@ -84,7 +83,7 @@ function App() {
             title="Добавить место"
             isOpen={isAddPlacePopupOpen ? "popup_opened" : ""}
             onClose={closeAllPopups}
-            buttonText="Сохранить"
+            buttonText="Создать"
         >
           <input
               className="popup__text"
@@ -115,7 +114,6 @@ function App() {
             title="Добавить место"
             isOpen={isEditAvatarPopupOpen ? "popup_opened" : ""}
             onClose={closeAllPopups}
-            buttonText="Сохранить"
         >
           <input
               className="popup__text"
