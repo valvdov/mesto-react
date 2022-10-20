@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from './Header.js'
 import Main from "./Main.js";
 import Footer from "./Footer.js";
@@ -12,17 +12,17 @@ import {CurrentUserContext} from "../contexts/CurrentUserContext";
 import {CardsContext} from "../contexts/CardContext";
 
 function App() {
-    const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
-    const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-    const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
-    const [isDeleteCardPopupOpen, setIsDeleteCardPopupOpen] = React.useState(false);
-    const [selectedCard, setSelectedCard] = React.useState({
+    const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
+    const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
+    const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
+    const [isDeleteCardPopupOpen, setIsDeleteCardPopupOpen] = useState(false);
+    const [selectedCard, setSelectedCard] = useState({
         name: "",
         link: "",
     });
-    const [deleteCard, setDeleteCard] = React.useState({});
-    const [currentUser, setCurrentUser] = React.useState({});
-    const [cards, setCards] = React.useState([]);
+    const [deleteCard, setDeleteCard] = useState({});
+    const [currentUser, setCurrentUser] = useState({});
+    const [cards, setCards] = useState([]);
 
 
     React.useEffect(() => {
